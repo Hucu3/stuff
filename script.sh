@@ -1,19 +1,19 @@
 #!/bin/bash
-# Aquí va el código
+#Aquí va el código
 #Esta línea solo es para crear una copia por cualquier cosa del archivo a modificar
 ########cp /etc/network/interfaces /etc/network/interfaces.bak
-# Esta sección presenta las opciones necesarias
+#Esta sección presenta las opciones necesarias
 echo "Para ajustar la red usando DHCP escribe: 1"
 echo "Para ajustar la red con ip estático en casa escribe: 2"
 echo "Para ajustar la red con ip estático el trabajo escribe: 3"
 echo ""
 echo ""
-# Esta sección es para esperar la elección del usuario
+#Esta sección es para esperar la elección del usuario
 read -p "Escribe el número : " i
-# En esta sección válida la opción del usuario
+#En esta sección válida la opción del usuario
 if [ $i -eq 1 ]
 then
-    # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar DHCP
+    #Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar DHCP
     echo source /etc/network/interfaces.d/* > /etc/network/interfaces
     echo  >> /etc/network/interfaces
     echo auto lo enp0s3 >> /etc/network/interfaces
@@ -24,7 +24,7 @@ then
     echo iface enp0s3 inet dhcp >> /etc/network/interfaces
 elif [ $i -eq 2 ]
 then
-    # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar ip estático en casa
+    #Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar ip estático en casa
     echo source /etc/network/interfaces.d/* > /etc/network/interfaces
     echo  >> /etc/network/interfaces
     echo auto lo enp0s3 >> /etc/network/interfaces
