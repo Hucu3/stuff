@@ -14,31 +14,33 @@ echo " "
 read -p "Escribe el número : " number
 
 # En esta sección válida la opción del usuario
-if [ $number -eq 1 ]; then
-        # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar DHCP
-        echo source /etc/network/interfaces.d/* > /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo auto lo enp0s3 >> /etc/network/interfaces
-        echo allow-hotplug enp0s3 >> /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo iface lo inet loopback >> /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo iface enp0s3 inet dhcp >> /etc/network/interfaces
-
-elif [ $number -eq 2 ]; then
-                # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar ip estático en casa
-        echo source /etc/network/interfaces.d/* > /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo auto lo enp0s3 >> /etc/network/interfaces
-        echo allow-hotplug enp0s3 >> /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo iface lo inet loopback >> /etc/network/interfaces
-        echo  >> /etc/network/interfaces
-        echo iface enp0s3 inet static >> /etc/network/interfaces
-        echo   address 192.168.100.60/24 >> /etc/network/interfaces
-        echo gateway 192.168.100.1
-        echo dns-nameservers 8.8.8.8 1.1.1.1 >> /etc/network/interfaces
-elif [ $number -eq 3 ]; then
+if [ $number -eq 1 ]
+then
+    # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar DHCP
+    echo source /etc/network/interfaces.d/* > /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo auto lo enp0s3 >> /etc/network/interfaces
+    echo allow-hotplug enp0s3 >> /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo iface lo inet loopback >> /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo iface enp0s3 inet dhcp >> /etc/network/interfaces
+elif [ $number -eq 2 ]
+then
+    # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar ip estático en casa
+    echo source /etc/network/interfaces.d/* > /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo auto lo enp0s3 >> /etc/network/interfaces
+    echo allow-hotplug enp0s3 >> /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo iface lo inet loopback >> /etc/network/interfaces
+    echo  >> /etc/network/interfaces
+    echo iface enp0s3 inet static >> /etc/network/interfaces
+    echo   address 192.168.100.60/24 >> /etc/network/interfaces
+    echo gateway 192.168.100.1
+    echo dns-nameservers 8.8.8.8 1.1.1.1 >> /etc/network/interfaces
+elif [ $number -eq 3 ]
+then
         echo "Thanks for entering # 3"
 else
         echo "Esa no era una opción, intenta de nuevo"
