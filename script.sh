@@ -7,8 +7,8 @@
 echo "Para ajustar la red usando DHCP escribe: 1"
 echo "Para ajustar la red con ip estático en casa escribe: 2"
 echo "Para ajustar la red con ip estático el trabajo escribe: 3"
-echo " "
-echo " "
+echo ""
+echo ""
 
 # Esta sección es para esperar la elección del usuario
 read -p "Escribe el número : " i
