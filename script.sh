@@ -9,8 +9,7 @@ echo "Para ajustar la red con ip estático el trabajo escribe: 3"
 echo ""
 echo ""
 # Esta sección es para esperar la elección del usuario
-echo "Escribe el número :"
-read i
+read -p "Escribe el número : " i
 # En esta sección válida la opción del usuario
 if [ $i -eq 1 ]
 then
