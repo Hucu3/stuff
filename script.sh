@@ -43,4 +43,4 @@ else
     echo "Esa no era una opción, intenta de nuevo"
 fi
 #Esta linea de codigo es para reiniciar el servicio de conexión para que se efectúen los cambios
-########/etc/init.d/networking restart
+/etc/init.d/networking restart
