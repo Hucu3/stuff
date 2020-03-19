@@ -9,13 +9,11 @@ echo "Para ajustar la red con ip estático el trabajo escribe: 3"
 echo ""
 echo ""
 # Esta sección es para esperar la elección del usuario
-read -p "Escribe el número : " i
-if [ $i -eq 5 ]
-then
-    echo "Value of i is 5"
-elif [ $i -eq 10 ]
+read -p "Enter value of i :" i
+
+if [ $i -eq 10 ]
 then
     echo "Value of i is 10"
 else
-    echo "Value of i is not equal to 5 or 10"
+    echo "Value of i is not equal to 10"
 fi
