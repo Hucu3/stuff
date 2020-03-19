@@ -11,10 +11,10 @@ echo " "
 echo " "
 
 # Esta sección es para esperar la elección del usuario
-read -p "Escribe el número : " number
+read -p "Escribe el número : " i
 
 # En esta sección válida la opción del usuario
-if [ $number -eq 1 ]
+if [ $i -eq 1 ]
 then
     # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar DHCP
     echo source /etc/network/interfaces.d/* > /etc/network/interfaces
@@ -25,7 +25,7 @@ then
     echo iface lo inet loopback >> /etc/network/interfaces
     echo  >> /etc/network/interfaces
     echo iface enp0s3 inet dhcp >> /etc/network/interfaces
-elif [ $number -eq 2 ]
+elif [ $i -eq 2 ]
 then
     # Estos comandos eliminan el contenido anterior y lo sustituye por para habilitar ip estático en casa
     echo source /etc/network/interfaces.d/* > /etc/network/interfaces
@@ -39,7 +39,7 @@ then
     echo   address 192.168.100.60/24 >> /etc/network/interfaces
     echo gateway 192.168.100.1
     echo dns-nameservers 8.8.8.8 1.1.1.1 >> /etc/network/interfaces
-elif [ $number -eq 3 ]
+elif [ $i -eq 3 ]
 then
         echo "Thanks for entering # 3"
 else
@@ -47,4 +47,4 @@ else
 fi
 #Esta linea de codigo es para reiniciar el servicio de conexión para que se efectúen los cambios
 
-/etc/init.d/networking restart
+########/etc/init.d/networking restart
