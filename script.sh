@@ -10,7 +10,6 @@ echo ""
 echo ""
 #Esta sección es para esperar la elección del usuario
 read -p "Escribe el número : " i
-echo $i
 #En esta sección válida la opción del usuario
 if [ $i -eq 1 ]
 then
