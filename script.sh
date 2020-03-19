@@ -34,7 +34,7 @@ then
     echo  >> /etc/network/interfaces
     echo iface enp0s3 inet static >> /etc/network/interfaces
     echo   address 192.168.100.60/24 >> /etc/network/interfaces
-    echo gateway 192.168.100.1
+    echo gateway 192.168.100.1 >> /etc/network/interfaces
     echo dns-nameservers 8.8.8.8 1.1.1.1 >> /etc/network/interfaces
 elif [ $i -eq 3 ]
 then
