@@ -38,9 +38,9 @@ then
     echo dns-nameservers 8.8.8.8 1.1.1.1 >> /etc/network/interfaces
 elif [ $i -eq 3 ]
 then
-        echo "Thanks for entering # 3"
+    echo "Thanks for entering # 3"
 else
-        echo "Esa no era una opción, intenta de nuevo"
+    echo "Esa no era una opción, intenta de nuevo"
 fi
 #Esta linea de codigo es para reiniciar el servicio de conexión para que se efectúen los cambios
 ########/etc/init.d/networking restart
