@@ -8,7 +8,7 @@ echo "Para ajustar la red con ip estático en casa escribe: 2"
 echo "Para ajustar la red con ip estático el trabajo escribe: 3"
 echo ""
 echo ""
-# Esta sección es para esperar la elección del usuario
+#Esta sección es para esperar la elección del usuario
 read -p "Enter value of i :" i
 
 if [ $i -eq 10 ]
